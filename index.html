@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GSF · 三人小隊</title>
+<title>GSF</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap');
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -337,7 +337,7 @@ Helia 說：${text}`;
             ...history.slice(0, -1),
             { role: 'user', parts: [{ text: fullPrompt }] }
           ],
-          generationConfig: { temperature: 0.9, maxOutputTokens: 1500 }
+          generationConfig: { temperature: 0.9, maxOutputTokens: 10000 }
         })
       }
     );
