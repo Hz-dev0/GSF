@@ -272,9 +272,9 @@ function removeTyping() {
 // ── 顯示開場白 ──
 async function showGreeting() {
   const greetings = [
-    { key: 'nahida',  content: '唔……你來啦！最近心靈的花園裡有沒有遇到什麼讓你覺得沉重的小雜草呢？' },
-    { key: 'nefer',   content: '歡迎回來，把卡住你的那盤局擺上桌吧。' },
-    { key: 'mavuika', content: '哈哈！打起精神來，今天我們三個人都在這裡幫你壓陣！' },
+    { key: 'nahida',  content: '（歪著頭，用亮晶晶的大眼睛好奇地看著你，微微一笑）唔……你來啦！最近心靈的花園裡有沒有遇到什麼讓你覺得沉重的小雜草呢？' },
+    { key: 'nefer',   content: '（優雅地端詳著手中的棋子，嘴角帶著一抹若有似無的微笑）呵呵，歡迎回來，Helia。把卡住你的那盤局擺上桌吧。' },
+    { key: 'mavuika', content: '（豪爽地笑了一聲，眼神燃燒著溫暖的金光）哈哈！打起精神來，Helia！今天我們三個人都在這裡幫你壓陣！' },
   ];
   for (let i = 0; i < greetings.length; i++) {
     await addBubble(greetings[i].key, greetings[i].content, i * 600);
@@ -328,7 +328,7 @@ Helia 說：${text}`;
 
   try {
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
